@@ -1,6 +1,5 @@
 # Sistema de Gestión de Inventario
-
-**Equipo:** [Pon aquí los nombres completos]  
+  
 **Dominio:** Dominio 3 — Sistema de Gestión de Inventario  
 **Fecha:** Abril 2026
 
@@ -47,7 +46,7 @@ La tarea pesada ocurre en la ruta `POST /movimientos`. Cuando se registra una sa
 
 ```bash
 # 1. Clonar el repositorio
-git clone [URL_DEL_REPO]
+git clone al repositorio
 cd inventario
 
 # 2. Crear las tablas en RDS
@@ -60,7 +59,7 @@ docker build -t inventario-app .
 docker run -d -p 3000:3000 \
   -e DB_HOST=ENDPOINT_RDS \
   -e DB_USER=admin \
-  -e DB_PASSWORD=TU_PASSWORD \
+  -e DB_PASSWORD=contraseña \
   -e DB_NAME=inventario_db \
   inventario-app
 
@@ -72,4 +71,4 @@ http://IP_EC2:3000
 
 ## Decisiones técnicas
 
-Diseñamos cuatro tablas porque separar categorias de productos hace el sistema más flexible y normalizado. Los movimientos se guardan en su propia tabla para mantener un historial completo y auditable. Las alertas también se persisten en la base de datos en lugar de solo imprimirse, lo que permite consultarlas desde la interfaz. Todo el manejo de errores sigue el patrón try/except/finally para garantizar que las conexiones siempre se cierren. Las credenciales nunca están en el código, se pasan exclusivamente por variables de entorno al correr el contenedor.
+Diseñe cuatro tablas porque separar categorias de productos hace el sistema más flexible y normalizado. Los movimientos se guardan en su propia tabla para mantener un historial completo y auditable. Las alertas también se persisten en la base de datos en lugar de solo imprimirse, lo que permite consultarlas desde la interfaz. Todo el manejo de errores sigue el patrón try/except/finally para garantizar que las conexiones siempre se cierren. Las credenciales nunca están en el código, se pasan exclusivamente por variables de entorno al correr el contenedor.
