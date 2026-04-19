@@ -1,5 +1,6 @@
 # Sistema de Gestión de Inventario
-  
+
+**Equipo:** Luis Alfonso Juárez Amaro
 **Dominio:** Dominio 3 — Sistema de Gestión de Inventario  
 **Fecha:** Abril 2026
 
@@ -45,7 +46,7 @@ La tarea pesada ocurre en la ruta `POST /movimientos`. Cuando se registra una sa
 ## Cómo levantar el proyecto
 
 ```bash
-# 1. Clonar el repositorio
+# 1. Clonar el repositorio git clone https://github.com/Lolmastercraft/inventario-technova.git
 git clone al repositorio
 cd inventario
 
